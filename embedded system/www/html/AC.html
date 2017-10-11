@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<link rel="apple-touch-icon" href="images/icon.png" />
+	<link rel="apple-touch-startup-image" href="images/splash.png">
+	
+	<link rel="stylesheet" media="screen" type="text/css" href="css/reset.css" />	
+	<link rel="stylesheet" media="screen" type="text/css" href="css/main.css" />
+	<link rel="shortcut icon" href="home.ico"/>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.js"></script>	
+
+	
+	<title>冷氣控制</title>
+
+</head>
+
+<body onorientationchange="Orientation();">
+
+<div id="wrapper">
+
+	<!-- HEADER -->
+	<div id="header">
+		<h1 id="logo">Control Panel</h1>
+		<p class="header-button left"><a href="javascript:history.go(-1)" onclick="return link(this)">Back</a></p>
+	</div> <!-- /header -->
+	
+	<!-- CONTENT -->
+	<div id="content">
+		<center>
+			<h2 class="t-center">Switch</h2>
+			<table class="air-box">
+				<tr>
+					<td align=center class="air-td">
+						<input type="image" src="images/on.png" id="btn_on" onclick="turnOn();" style="width:48px;">
+						<font color=#aa0>On</font>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="image" src="images/off.png" id="btn_off" onclick="turnOff();" style="width:48px;">
+						<font color=red>Off</font>
+					</td>
+				</tr>
+			</table>
+		</center>
+		<!-- NAVIGATION -->
+			<h2 class="t-center">Tool Bar</h2>
+			<ul id="nav" class="box" style="margin:0 auto;display:table;">
+				<li class="ico-stats"><a href="stats.cgi" onclick="return link(this)">宿舍狀態</a></li>
+				<li class="ico-light"><a href="stats.cgi" onclick="return link(this)">電燈控制</a></li>
+			</ul>
+	</div> <!-- /content -->
+</div> <!-- /wrapper -->
+
+</body>
+</html>
